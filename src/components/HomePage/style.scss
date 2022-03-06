@@ -1,0 +1,32 @@
+@import '@/assets/scss/index.scss';
+
+.btn-search {
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    border-style: double;
+    border-color: #B4B4B4;
+    cursor: pointer;
+    color: $title;
+    font-size:1.2rem;
+    -webkit-font-smoothing: antialiased;
+    transition:all 0.5s ease;
+}
+
+.btn-search:hover {
+    height: 50px;
+    color: white;
+    background: #69A3FF;
+    cursor: pointer;
+    border-color: white;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+.home-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

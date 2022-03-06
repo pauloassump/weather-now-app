@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "jest"
   },
   "dependencies": {
+    "@vue/compiler-dom": "^3.2.31",
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
     "eslint-visitor-keys": "^3.3.0",
@@ -21,11 +23,14 @@
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
+    "@vue/test-utils": "^2.0.0-rc.17",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "jest": "^27.5.1",
     "sass": "^1.49.9",
     "sass-loader": "^10.1.1",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

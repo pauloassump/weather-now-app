@@ -21,6 +21,12 @@
             </div>
        </div>
 
+       <router-link to="/">
+            <button class="btn-back-home">
+                VOLTAR PARA HOME
+            </button>
+        </router-link>
+
        <CardError
             @tryAgain="getTemperatures"
             :lastUpdate="lastUpdate"
@@ -64,10 +70,10 @@ export default {
             this.cleanSearchedCities()
             this.getTemperatures()
         }, 10*60000)
-        console.log(this.searchedCities)
     },
     methods: {
         getTemperatures() {
+            this.cleanSearchedCities()
             this.citiesDefault.forEach(city => {
                 WeatherService.getTemperatures(city.latitude, city.longitude)
                 .then(res => {
@@ -80,8 +86,6 @@ export default {
                     sessionStorage.setItem('citiesSearch', JSON.stringify(this.searchedCities))
                 })
                 .catch( e => {
-
-                    console.log(e.response.status)
                     if (e.response.status == 400 || e.response.status == 500) {
                         this.showLoader = false,
                         this.showTryAgain = true,
