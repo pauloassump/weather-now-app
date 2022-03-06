@@ -16,7 +16,6 @@ export default {
     filters: {
         convertTemp(temp) {
             temp = temp - 273.15
-            console.log(temp)
             return temp.toFixed(0)
         }
     },
