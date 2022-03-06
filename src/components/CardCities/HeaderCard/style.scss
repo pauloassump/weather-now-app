@@ -1,0 +1,17 @@
+@import '@/assets/scss/index.scss';
+
+.card-title {
+    color: $title;
+    font-size:1.0rem;
+    margin-top: 30px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    &-header {
+        height:30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
