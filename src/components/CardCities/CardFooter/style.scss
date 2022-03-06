@@ -1,0 +1,23 @@
+@import '@/assets/scss/index.scss';
+
+.card-footer {
+    margin-top: auto;
+    height: 100px;
+    background-color: $card-footer-bg;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    opacity: 70%;
+}
+
+.info-footer {
+  display: grid;
+  grid-template-columns: 125px 125px;
+  font-size: 0.8rem;
+  color: $title;
+}
+
+.update-footer {
+  color: $title;
+  font-size: 0.6rem;
+}
