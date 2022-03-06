@@ -1,6 +1,6 @@
 <template>
     <section v-colorTemp="valueTemp(cityTemp)" class="card-body">
-        {{ convertTemp(cityTemp) + 'º' }}
+        {{ cityTemp | convertTemp }}º
     </section>
 </template>
 
@@ -11,6 +11,13 @@ export default {
             type: Number,
             default: 273,
             required: true
+        }
+    },
+    filters: {
+        convertTemp(temp) {
+            temp = temp - 273.15
+            console.log(temp)
+            return temp.toFixed(0)
         }
     },
     methods: {
@@ -25,11 +32,6 @@ export default {
             if(value > 25) {
                 return '#ED1946'
             }
-        },
-        convertTemp(temp) {
-            temp = temp - 273.15
-            console.log(temp)
-            return temp.toFixed(0)
         }
     }
 }
